@@ -1,0 +1,16 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 12, 2023, 3:01:36 PM
+    Author     : toden
+*/
+
+.require {
+    color: #666;
+}
+label small {
+    color: #999;
+    font-weight: normal;
+}
