@@ -49,7 +49,8 @@ public class HotelDAO extends MyDAO {
         HotelDAO hDAO = new HotelDAO();
         CityDAO cDAO = new CityDAO();
         
-        hDAO.getHotel(cDAO.getCityByID(1).getHotelID()).getHotel_Name();
+        
+        System.out.println(hDAO.getHotel(cDAO.getCityByID(1).getHotelID()).getHotel_Name());
     }
     
 }

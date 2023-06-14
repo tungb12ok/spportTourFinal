@@ -230,10 +230,10 @@ public class TourDAO extends MyDAO {
     public static void main(String[] args) {
         TourDAO tDao = new TourDAO();
         
-        System.out.println(tDao.getTourByID(1).getStartDate());
+//        System.out.println(tDao.getTourByID(1).getStartDate());
 //        Tour tour = new Tour(4, "2020-01-02", "2020-01-02", "Nghệ An", "1", 3, "Nghệ An", "Ảnh1", 500, false, "1");
 //                dao.updateTour(tour);
-//        System.out.println(dao.getTourID("9"));
+        System.out.println(tDao.getTourByID(9));
 
     }
 }

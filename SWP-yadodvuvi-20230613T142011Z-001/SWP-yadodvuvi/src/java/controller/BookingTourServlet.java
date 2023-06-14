@@ -49,7 +49,7 @@ public class BookingTourServlet extends HttpServlet {
             request.setAttribute("totalPrice", price);
             request.setAttribute("tour", list);
             request.setAttribute("id", id_raw);
-            request.setAttribute("t", dao.getTourID(id_raw));
+            request.setAttribute("t", dao.getTourByID(Integer.parseInt(id_raw)));
             request.getRequestDispatcher("checkOut.jsp").forward(request, response);
         }
     }
@@ -102,7 +102,7 @@ public class BookingTourServlet extends HttpServlet {
         request.setAttribute("totalPrice", price);
         request.setAttribute("tour", list);
         request.setAttribute("id", id_raw);
-        request.setAttribute("t", dao.getTourID(id_raw));
+        request.setAttribute("t", dao.getTourByID(Integer.parseInt(id_raw)));
 
         request.setAttribute("people", people); // Update the 'people' attribute with the updated value
         //                    response.getWriter().print(people+"dqwewqeewqeqwwqe");

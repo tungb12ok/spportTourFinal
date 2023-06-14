@@ -16,7 +16,7 @@ public class CityDAO extends MyDAO {
 
     public List<City> getAllCity() {
         List<City> cities = new ArrayList<>();
-        String sql = "SELECT [City_ID], [CityName], [HotelID] FROM [dbo].[City]";
+        String sql = "SELECT c.[City_ID], c.[CityName], hc.[HotelID] FROM [dbo].[City] c JOIN [dbo].[Hotel_City] hc ON hc.[CityID] = c.[City_ID]";
 
         try {
             ps = con.prepareStatement(sql);
@@ -42,7 +42,7 @@ public class CityDAO extends MyDAO {
     }
 
     public City getCityByID(int cityID) {
-        String sql = "SELECT [City_ID], [CityName], [HotelID] FROM [dbo].[City] WHERE [City_ID] = ?";
+        String sql = "SELECT [City_ID], [CityName], [HotelID] FROM [dbo].[City] c JOIN [dbo].[Hotel_City] hc ON hc.[CityID] = c.[City_ID] WHERE c.[City_ID] = ?";
 
         try {
             ps = con.prepareStatement(sql);
@@ -70,7 +70,7 @@ public class CityDAO extends MyDAO {
 
     public static void main(String[] args) {
         CityDAO dao = new CityDAO();
-        System.out.println(dao.getCityByID(8).getCity_Name()
+        System.out.println(dao.getAllCity().size()
         );
     }
 }

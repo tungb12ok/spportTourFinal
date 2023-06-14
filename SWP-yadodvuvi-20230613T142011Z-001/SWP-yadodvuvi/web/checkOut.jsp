@@ -99,7 +99,7 @@
                                                 </div>
                                             </td>
                                             <td id="priceCell" class="align-middle">
-                                                <p class="mb-0" style="font-weight: 500;">${String.format("%.1f", t.getTotalPrice() )}VND</p>
+                                                <p class="mb-0" style="font-weight: 500;">${String.format("%.1f", t.getTotalPrice())}VND</p>
                                             </td>
                                         </tr>
                                     </tbody>
